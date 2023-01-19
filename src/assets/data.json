@@ -1,0 +1,54 @@
+{
+  "lugares": [
+    {
+      "name": "Plaza Independencia",
+      "type": "Blips",
+      "geometry": [-43.25319135750684, -65.30935165344405]
+    },
+    {
+      "name": "Antares TW",
+      "type": "Plops",
+      "geometry": [-43.2547688782692, -65.3058370362508]
+    },
+    {
+      "name": "Huxley's Neue Welt",
+      "type": "Tracks",
+      "geometry": [-43.24795, -65.30605]
+    },
+    {
+      "name": "Hospital Zonal",
+      "type": "Plops",
+      "geometry": [-43.25533842639032, -65.3096353838772]
+    },
+    {
+      "name": "SkatePark",
+      "type": "Blips",
+      "geometry": [-43.261712545423215, -65.30606346708873]
+    },
+    {
+      "name": "Club Independiente",
+      "type": "Tracks",
+      "geometry": [-43.257528838612934, -65.30689938348486]
+    },
+    {
+      "name": "Museo Paleontologico",
+      "type": "Blips",
+      "geometry": [-43.24929328845686, -65.3080437092406]
+    },
+    {
+      "name": "Laguna Chiquichano",
+      "type": "Plops",
+      "geometry": [-43.24904265321422, -65.29963239884052]
+    },
+    {
+      "name": "Memorable",
+      "type": "Tracks",
+      "geometry": [-43.25901278953341, -65.31586094168841]
+    },
+    {
+      "name": "Shopping",
+      "type": "Tracks",
+      "geometry": [-43.2694156130532, -65.28001628424977]
+    }
+  ]
+}
