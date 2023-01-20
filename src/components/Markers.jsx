@@ -20,7 +20,6 @@ const Markers = ({ points }) => {
   }; */
 
   const pintarMarkers = () => {
-    console.log("aca");
     return points.map((p, index) => {
       return (
         <div key={index}>

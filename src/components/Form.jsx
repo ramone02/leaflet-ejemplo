@@ -19,11 +19,11 @@ const Form = () => {
   };
 
   return (
-    <div className="container my-3">
-      <p className="fw-bold">SET COORDENADAS</p>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <div className="row">
+    <div className="container my-2 p-3 shadow-lg bg-white rounded">
+      <p className="fw-bold text-center">SET COORDENADAS</p>
+      <div className="">
+        <form onSubmit={handleSubmit} className="d-flex flex-column">
+          <div className="d-flex flex-row justify-content-evenly mt-2">
             <div className="col-4">
               <input
                 type="text"
@@ -46,7 +46,9 @@ const Form = () => {
                 onChange={(e) => setLongitud(e.target.value)}
               />
             </div>
-            <div className="col-4">
+            </div>
+            <div className="d-flex justify-content-center">
+            <div className="col-4 d-flex justify-content-evenly">
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -77,20 +79,21 @@ const Form = () => {
                   className="form-check-input"
                   type="radio"
                   name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  id="flexRadioDefault3"
                   onChange={(e) => setType("Blips")}
                 />
-                <label className="form-check-label" htmlFor="flexRadioDefault1">
+                <label className="form-check-label" htmlFor="flexRadioDefault3">
                   Blips
                 </label>
               </div>
             </div>
-            <div className="col-4">
-              <button type="submit" className="btn btn-primary btn-sm">
+            </div>
+            <div className="d-flex justify-content-center p-2">
+              <button type="submit" className="btn btn-primary btn-sm col-3">
                 Enviar
               </button>
             </div>
-          </div>
+          
         </form>
       </div>
     </div>

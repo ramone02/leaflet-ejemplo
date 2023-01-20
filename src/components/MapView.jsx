@@ -5,14 +5,20 @@ import Form from "./Form";
 import "leaflet/dist/leaflet.css";
 import { PlacesContext } from "../context/PlacesContext";
 
-const MapView = () => {
+const MapView = ({data}) => {
   //const [data, setData] = useState([]);
   //const { places } = useContext(PlacesContext);
   const [points, setPoints] = useState([]);
 
   useEffect(() => {
-    getData();
-  }, []);
+    //getData();
+    if(data){
+      setPoints(data)
+    }
+    
+    
+    
+  }, [data]);
 
   const getData = async () => {
     try {
@@ -23,11 +29,12 @@ const MapView = () => {
       console.log(error);
     }
   };
-
+  // style={{width: '99.5%'}} 
   return (
     <>
       <Form />
-      <MapContainer center={[-43.24895, -65.30505]} zoom={13}>
+      <MapContainer center={[-43.24895, -65.30505]} zoom={13}> 
+
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
