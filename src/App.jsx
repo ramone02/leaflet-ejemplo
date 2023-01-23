@@ -7,9 +7,9 @@ function App() {
   return (
     <SocketProvider>
       <div className="d-flex" id="wrapper">
-        <SideBar />
+        <SideBar setSelected={setSelected} selected={selected}/>
         <div id="page-content-wrapper">
-          <div className="container-fluid">            
+          <div className="container-fluid px-3">            
             <MapView />
           </div>
         </div>
