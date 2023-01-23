@@ -1,10 +1,9 @@
 import React from "react";
 import { Marker, Popup } from "react-leaflet";
-import { CustomizeIcon } from "./CustomizeIcon";
-//import { MarkerIcon } from "./react-leaflet-icon";
+import { CustomizeIcon } from "../CustomizeIcon";
 import "leaflet/dist/leaflet.css";
 
-const Markers = ({ points }) => {
+const Markers = ({ messages }) => {
   /* //Obtener color por el type
   const getColor = (type) => {
     switch (type) {
@@ -19,9 +18,10 @@ const Markers = ({ points }) => {
     }
   }; */
 
+  console.log(messages);
   const pintarMarkers = () => {
     console.log("aca");
-    return points.map((p, index) => {
+    return messages.map((p, index) => {
       return (
         <div key={index}>
           <Marker
@@ -41,7 +41,7 @@ const Markers = ({ points }) => {
     });
   };
 
-  return <>{points !== null ? pintarMarkers() : <></>}</>;
+  return <>{messages.length > 0 ? pintarMarkers() : <></>}</>;
 };
 
 export default Markers;

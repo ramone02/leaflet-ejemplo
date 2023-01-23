@@ -1,20 +1,20 @@
 import "./App.css";
-import MapView from "./components/MapView";
-import { PlacesProvider } from "./context/PlacesContext";
-import SideBar from "./components/SideBar";
+import MapView from "./components/MapView/MapView";
+import { SocketProvider } from "./context/SocketContext";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
   return (
-    <PlacesProvider>
+    <SocketProvider>
       <div className="d-flex" id="wrapper">
         <SideBar />
         <div id="page-content-wrapper">
-          <div className="container-fluid">
+          <div className="container-fluid">            
             <MapView />
           </div>
         </div>
       </div>
-    </PlacesProvider>
+    </SocketProvider>
   );
 }
 

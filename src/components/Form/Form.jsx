@@ -1,21 +1,24 @@
 import React, { useContext, useState } from "react";
-import { PlacesContext } from "../context/PlacesContext";
+import { SocketContext } from "../../context/SocketContext";
 
 const Form = () => {
   const [latitud, setLatitud] = useState(-43.2609757167659);
   const [longitud, setLongitud] = useState(-65.27568688154048);
   const [type, setType] = useState("");
-  const { addPlace } = useContext(PlacesContext);
+  const { socket } = useContext(SocketContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
-    const obj = {
+    const message = {
       type: type,
       name: "Nombre Editable",
       geometry: [latitud, longitud],
     };
-    addPlace(obj);
+    setLatitud(0);
+    setLongitud(0);
+    setType("");
+    //addPlace(obj);
+    socket.emit('message', message);
   };
 
   return (
